@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>FARMBOARD ULTRA - Greenland</title>
     <style>
-        /* Pastikan tidak ada margin atau scrollbar pada pembungkus */
+        /* Menghilangkan margin dan mengunci ukuran layar agar tidak bisa di-zoom out */
         html, body {
             margin: 0;
             padding: 0;
             width: 100vw;
             height: 100vh;
             overflow: hidden;
-            background-color: #2D9596;
-            /* Mencegah zoom saat double tap di beberapa browser HP */
+            background-color: #2D9596; /* Warna khas Greenland */
             touch-action: manipulation;
         }
 
-        /* Iframe dibuat fixed agar benar-benar menempel di layar */
+        /* Iframe dibuat memenuhi seluruh layar (Full Screen) */
         iframe {
             position: fixed;
             top: 0;
@@ -30,41 +29,17 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            z-index: 999999;
+            z-index: 9999;
         }
     </style>
 </head>
 <body>
-    <!-- Link Iframe Web App Pembeli -->
-    <iframe src="https://script.google.com/macros/s/AKfycbxk3P4ZBNAMIRySCJgcfAQFoL5wV_ZEumtT4A7L0JytwwERV6IpOB4Rw6UwdN_77fNg/exec" allowfullscreen></iframe>
-</body>
-</html>caling tetap 1:1 di mobile */
-        .app-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch; /* Scroll halus untuk iOS */
-        }
 
-        iframe { 
-            display: block;
-            width: 100%; 
-            height: 100%; 
-            border: none; 
-            margin: 0;
-            padding: 0;
-        }
-    </style>
-</head>
-<body>
-    <div class="app-container">
-        <!-- GANTI URL DI BAWAH DENGAN LINK WEB APP HASIL DEPLOY KAMU -->
-        <iframe src="https://script.google.com/macros/s/AKfycbxk3P4ZBNAMIRySCJgcfAQFoL5wV_ZEumtT4A7L0JytwwERV6IpOB4Rw6UwdN_77fNg/exec"></iframe>
-    </div>
+    <!-- 
+        GANTI URL DI BAWAH DENGAN LINK WEB APP (DEPLOYMENT) TERBARU KAMU.
+        Pastikan link diakhiri dengan /exec agar aplikasi berjalan.
+    -->
+    <iframe src="https://script.google.com/macros/s/AKfycbwhu7z4-uqC2HyrZjZ4F8p3Z8EhjQZNRwDNjQ5m862XWQo5sKVcoNlbz6kxotymcCcp/exec" allowfullscreen></iframe>
+
 </body>
 </html>
