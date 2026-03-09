@@ -2,15 +2,49 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>FARMBOARD ULTRA - Greenland</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; background-color: #2D9596; }
-        iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        /* Mengunci ukuran agar tidak mengecil dan memenuhi layar HP */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%; 
+            overflow: hidden; 
+            background-color: #2D9596; 
+            /* Menghilangkan seleksi teks agar lebih seperti aplikasi asli */
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        /* Container iframe agar scaling tetap 1:1 di mobile */
+        .app-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch; /* Scroll halus untuk iOS */
+        }
+
+        iframe { 
+            display: block;
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
 <body>
-    <!-- GANTI URL DI BAWAH DENGAN LINK WEB APP PEMBELI -->
-    <iframe src="https://script.google.com/macros/s/AKfycbxk3P4ZBNAMIRySCJgcfAQFoL5wV_ZEumtT4A7L0JytwwERV6IpOB4Rw6UwdN_77fNg/exec"></iframe>
+    <div class="app-container">
+        <!-- GANTI URL DI BAWAH DENGAN LINK WEB APP HASIL DEPLOY KAMU -->
+        <iframe src="https://script.google.com/macros/s/AKfycbxk3P4ZBNAMIRySCJgcfAQFoL5wV_ZEumtT4A7L0JytwwERV6IpOB4Rw6UwdN_77fNg/exec"></iframe>
+    </div>
 </body>
 </html>
